@@ -1,14 +1,14 @@
-<p>Restaurants#new</p>
-<p>Find me in app/views/restaurants/new.html.erb</p>
-
 <div class="container">
   <h1>Add a new restaurant</h1>
-  <%= simple_form_for (@restaurant) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :address %>
-    <%= f.input :category %>
-    <%= f.input :phone_number %>
-    <%= f.submit "Create restaurant", class: "btn btn-primary" %>
-  <% end %>
-  <p> <%= link_to "Cancel", restaurants_path, class: "btn btn-primary"%> </p>
+  <div class="form">
+    <%= simple_form_for (@restaurant) do |f| %>
+      <%= f.input :name, class: "input" %>
+      <%= f.input :address, class: "input" %>
+      <%= f.input :category, class: "input" %>
+      <%= f.input :phone_number, class: "input" %>
+      <%= f.submit "Create restaurant", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
+  <p> <%= link_to "Cancel", restaurants_path, class: "btn btn-primary btn-cancel"%> </p>
 </div>
